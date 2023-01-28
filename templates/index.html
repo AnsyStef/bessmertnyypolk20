@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Бессмертный полк</title>
+</head>
+<body>
+    <a href="/"><image style="width:20%; position: absolute;" src="{% static 'images/bpolk.png' %}"></image></a>
+    <div id="search-line">
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.search }}
+            <button type="submit" id="submit-button">🔍️ Поиск</button>
+        </form>
+    </div>
+</body>
+</html>

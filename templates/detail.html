@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        <title>{{ person.name }}</title>
+    </head>
+
+    <body>
+        <a href="/"><image style="width:20%; position: absolute; padding-bottom: 10px;" src="{% static 'images/bpolk.png' %}"></image></a>
+        <image style="position: absolute; width: 30%; border-radius: 10px; margin-right: 10px; margin-left: 10px; bottom: 0; margin-bottom: 10px;" src="{% static 'files/'|add:person.name|add:'.png' %}"></image>
+        <h1 style="color: white; position: absolute; left: 34%; top: 20%;">{{ person.name }}</h1>
+        <div id="detail" style="font-size: large;">
+            {{ person.description }}
+        </div>
+    </body>
+
+</html>
